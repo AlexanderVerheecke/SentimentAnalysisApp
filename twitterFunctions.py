@@ -11,7 +11,7 @@ from typing import Text
 
 from textblob import TextBlob
 
-
+import streamlit as st
 
 import tweepy
 import matplotlib.pyplot as plt
@@ -80,10 +80,12 @@ def get_table_download_link(df):
 def twitter_get(keyword, noOfTweets):
 
     #! Authentication for the Twitter API
-    consumerKey = 'eaimmSUr6UC12KRKjt2HFEe5h'
-    consumerSecret = 'CLbjYeObiyF2dHet8YaU0mGBShMVLDKAlbnjycSzxeGmJrEIGb'
-    accessToken = '1517195740380114944-XPZfdj1VaZ72QrXTq5es7lxwZzlvAO'
-    accessTokenSecret = 'ZVpKmKHRIJpJ7HhuqOR20FiXlFeUZ1cDUQzDNL7XAc96U'
+    consumerKey = st.secrets['consumerKey']
+    consumerSecret = st.secrets['consumerSecret']
+
+    accessToken = st.secrets['accessToken']
+
+    accessTokenSecret = st.secrets['accessTokenSecret']
     auth = tweepy.OAuthHandler(consumerKey, consumerSecret)
     auth.set_access_token(accessToken, accessTokenSecret)
     api = tweepy.API(auth)

@@ -11,18 +11,17 @@ from typing import Text
 
 from textblob import TextBlob
 
-# import sys
+
 
 import tweepy
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 
-# import os
 
 import nltk
 
-# import pycountry
+
 
 import re
 import string

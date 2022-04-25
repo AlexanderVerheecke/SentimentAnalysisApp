@@ -72,7 +72,7 @@ with st.form(key ='form_1'):
     with st.sidebar:
         user_word = st.sidebar.text_input("Hashtag to anlayse", "London", help='Ensure that the field is not empty.')
         # num_of_tweets = st.sidebar.slider("Select the number of Latest Tweets to Analyze", 0, 50, 1)
-        num_of_tweets = st.sidebar.number_input("Maximum number of tweets", min_value=20, max_value=100, value = 20, step = 1, help = 'Returns the specified amount of most recent tweets.')
+        num_of_tweets = st.sidebar.number_input("Maximum number of tweets", min_value=20, max_value=500, value = 20, step = 1, help = 'Returns the specified amount of most recent tweets. A minimum of 20 and a maximum of 500 tweets can be analysed. The more tweets specified, the longer analysing will take.')
         option = st.selectbox('N-gram model',('Unigram', 'Bigram', 'Trigram'), help='N-gram: Most common continous sequence of words. Unigram: 1 word, Bigram: 2 words, Trigram: 3 words.')
         st.sidebar.text("") # spacing
         submit_button = st.form_submit_button(label = 'Analyse tweets', help = 'Re-run analyzer with the current inputs.')
@@ -81,6 +81,9 @@ with st.form(key ='form_1'):
 if submit_button:
     if user_word == "":
         st.error("Type a hashtag!")
+        st.stop()
+    if num_of_tweets < 20 or  num_of_tweets > 500:
+        st.error("Type a number between 20 and 500!")
         st.stop()
     if len(user_word) != 0:
         with st.spinner('Getting data from Twitter...'):
@@ -97,7 +100,9 @@ if submit_button:
 st.sidebar.header("Instructions:")
 st.sidebar.write("For the best experience, select the dropdown icon in the upper right corner, go to 'Settings' and in 'Theme', select 'Light'.")
 st.sidebar.write("To use the sentiment analyser, type the hashtag to analyse in the first field and the amount of tweets in the second field. "+
-"Pressing 'Analyse tweets' will start the process. Please allow a couple of seconds for the algorithm to analyse the data. Ignore the 'Please replace st.beta_columns with st.columns.' message. This bug will be fixed in an update.")
+"Pressing 'Analyse tweets' will start the process. Please allow a couple of seconds for the algorithm to analyse the data. "+
+"Ignore the 'Please replace st.beta_columns with st.columns.' message. This bug will be fixed in an update."+
+"For help, hover over the ?.")
 st.sidebar.write("")
 st.sidebar.write("As a demonstration, an intial analysis with the following query has been done: hashtag = 'London', number of tweets = 20, represented by a unigram.")
 st.write("")

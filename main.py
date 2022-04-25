@@ -95,6 +95,7 @@ if submit_button:
 ## 2.2.3: Sidebar Information
 ##----------------------------------##
 st.sidebar.header("Instructions:")
+st.sidebar.write("For the best experience, select the dropdown icon in the upper right corner, go to 'Settings' and in 'Theme', select 'Light'")
 st.sidebar.write("To use the sentiment analyser, type the hashtag to analyse in the first field and the amount of tweets in the second field. "+
 "Pressing 'Analyse tweets' will start the process. Please allow a couple of seconds for the algorithm to analyse the data. Ignore the 'Please replace st.beta_columns with st.columns.' message. This bug will be fixed in an update.")
 st.write("")

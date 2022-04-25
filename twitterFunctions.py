@@ -254,7 +254,7 @@ def pieChart(positive, neutral, negative, keyword):
 # Function 8a:   FUNCTION FOR CREATING WORDCLOUDS
 #----------------
 # def create_wordcloud(text, file_Name):
-#         mask = np.array(Image.open("https://raw.githubusercontent.com/AlexanderVerheecke/SentimentAnalysisApp/main/cloud.png"))
+#         mask = np.array(Image.open("/Users/alex/Documents/GitHub/SentimentAnalysisApp/cloud.png"))
 #         stopwords = set(STOPWORDS)
 #         #!CREATING WORDCLOUD OBJECT
 #         wc = WordCloud(background_color="white",
@@ -285,7 +285,7 @@ def pieChart(positive, neutral, negative, keyword):
 #----------------
 
 def create_wordcloud_b(text, file_Name):
-    mask = np.array(Image.open("https://raw.githubusercontent.com/AlexanderVerheecke/SentimentAnalysisApp/main/cloud.png"))
+    mask = np.array(Image.open("/Users/alex/Documents/GitHub/SentimentAnalysisApp/cloud.png"))
     stopwords = set(STOPWORDS)
     wc = WordCloud(background_color="white",
         mask = mask,

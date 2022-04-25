@@ -1,5 +1,4 @@
 altair==4.2.0
-ipython==8.2.0
 langdetect==1.0.9
 matplotlib==3.4.3
 nltk==3.6.5

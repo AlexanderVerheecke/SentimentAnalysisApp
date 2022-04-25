@@ -6,7 +6,7 @@ from configparser import RawConfigParser
 from curses import KEY_A1
 from locale import normalize
 from posixpath import curdir
-from tkinter.messagebox import RETRY
+
 from typing import Text
 
 from textblob import TextBlob

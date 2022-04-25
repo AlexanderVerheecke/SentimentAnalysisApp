@@ -6,3 +6,5 @@ A Twitter sentiment analysis web application based on python and developed into 
 2. N-gram diagram: The user specifies if the data is collected in either a unigram, bigram, or trigram. A grapg with the 5 most common words based on the n-gram will be shown.
 
 3. Positive/Neutral/Negative wordcloud: A wordcloud with all the common vocabulary items is created based on its sentiment.
+
+Link to the web application: https://share.streamlit.io/alexanderverheecke/sentimentanalysisapp/main/main.py

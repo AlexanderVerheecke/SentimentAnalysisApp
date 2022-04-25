@@ -253,23 +253,23 @@ def pieChart(positive, neutral, negative, keyword):
 
 # Function 8a:   FUNCTION FOR CREATING WORDCLOUDS
 #----------------
-def create_wordcloud(text, file_Name):
-        mask = np.array(Image.open("https://raw.githubusercontent.com/AlexanderVerheecke/SentimentAnalysisApp/main/cloud.png"))
-        stopwords = set(STOPWORDS)
-        #!CREATING WORDCLOUD OBJECT
-        wc = WordCloud(background_color="white",
-        mask = mask,
-        max_words=3000,
-        stopwords=stopwords,
-        repeat=True)
+# def create_wordcloud(text, file_Name):
+#         mask = np.array(Image.open("https://raw.githubusercontent.com/AlexanderVerheecke/SentimentAnalysisApp/main/cloud.png"))
+#         stopwords = set(STOPWORDS)
+#         #!CREATING WORDCLOUD OBJECT
+#         wc = WordCloud(background_color="white",
+#         mask = mask,
+#         max_words=3000,
+#         stopwords=stopwords,
+#         repeat=True)
     
-        wc.generate(str(text))
+#         wc.generate(str(text))
 
-        #!SAVE TO absolute path -> wc.png
-        wc.to_file("/Users/alex/Documents/Personal Projects/twitterSentimentAnalysis/"+file_Name+".png")
-        print("Word Cloud Saved Successfully")
-        path="/Users/alex/Documents/Personal Projects/twitterSentimentAnalysis/"+file_Name+".png"
-        display(Image.open(path))
+#         #!SAVE TO absolute path -> wc.png
+#         wc.to_file("/Users/alex/Documents/Personal Projects/twitterSentimentAnalysis/"+file_Name+".png")
+#         print("Word Cloud Saved Successfully")
+#         path="/Users/alex/Documents/Personal Projects/twitterSentimentAnalysis/"+file_Name+".png"
+#         display(Image.open(path))
 
     #!----UNCOMMENT TO GET THE WORDCLOUD OUTPUTS------
 
@@ -285,7 +285,7 @@ def create_wordcloud(text, file_Name):
 #----------------
 
 def create_wordcloud_b(text, file_Name):
-    mask = np.array(Image.open("/Users/alex/Documents/Personal Projects/twitterSentimentAnalysis/cloud.png"))
+    mask = np.array(Image.open("https://raw.githubusercontent.com/AlexanderVerheecke/SentimentAnalysisApp/main/cloud.png"))
     stopwords = set(STOPWORDS)
     wc = WordCloud(background_color="white",
         mask = mask,

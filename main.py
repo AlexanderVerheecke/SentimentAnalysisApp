@@ -89,7 +89,7 @@ if submit_button:
             st.success('Analysis is done! You searched for the last ' + 
                         str(num_of_tweets) + 
                         ' tweets that used #' + 
-                        user_word+".")
+                        user_word+". Please wait for data representation to be complete.")
 
 
 ## 2.2.3: Sidebar Information

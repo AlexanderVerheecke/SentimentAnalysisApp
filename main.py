@@ -9,9 +9,6 @@ from numpy import e
 
 import streamlit as st
 
-import streamlit_metrics
-
-from streamlit_metrics import metric, metric_row
 
 import streamlit.components.v1 as components
 from PIL import Image
@@ -229,13 +226,14 @@ tw_list_positive, tw_list_neutral, tw_list_negative= tf.sentiment(tw_list)
 # Sentiment percentage
 st.subheader('Summary')
 st.write("Out of "+ str(len(tweet_list))+" tweets, "+str(len(negative_list))+" were negtive, " +str(len(neutral_list))+ " were neutral, and " +str(len(positive_list)) +" were positive.")
-metric_row(
-    {
-        "% Negative Tweets": tf.percentage(len(negative_list), len(tweet_list)),
-        "% Neutral Tweets": tf.percentage(len(neutral_list), len(tweet_list)),
-        "% Positive Tweets": tf.percentage(len(positive_list), len(tweet_list)),   
-    }
-)
+
+col1, col2, col3 = st.columns(3)
+negative_percentage = tf.percentage(len(negative_list), len(tweet_list))
+neutral_percentage = tf.percentage(len(neutral_list), len(tweet_list))
+positive_percentage = tf.percentage(len(positive_list), len(tweet_list))
+col1.metric("% Negative Tweets:", negative_percentage)
+col2.metric("% Neutral Tweets:", neutral_percentage)
+col3.metric("% Positive Tweets:", positive_percentage)
 
 #Most common
 # countdf = tf.most_common(count_vect_df)

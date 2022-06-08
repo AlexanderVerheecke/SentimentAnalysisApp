@@ -17,5 +17,5 @@ echo "\
 headless = true\n\
 enableCORS=false\n\
 port = $PORT\n\
-" > ~/.streamlit/secrets.toml
+" > /Users/alex/.streamlit/secrets.toml
 

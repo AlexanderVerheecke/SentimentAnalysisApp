@@ -144,6 +144,7 @@ def twitter_get(keyword, noOfTweets):
 
 # Function 4: CLEANING THE DATA
 #-----------------
+                                                #!THIS IS FOR ENGLISH, NEED TO DO ONE FOR GERMAN TOO
 def clean_tweets(tweet_list):
     #!DROPS ALL DUPLCIATES IN THE LIST
     # tweet_list.drop_duplicates(inplace = True)
@@ -196,7 +197,7 @@ def numberOfTweets(tweet_list_in, neutral_list_in, negative_list_in, positive_li
 
 # Function 6:   FUCNTION FOR GETTING THE SENTIMENTS
 #----------------
-
+                                                #!THIS IS FOR ENGLISH, NEED TO DO ONE FOR GERMAN TOO
 #!CALCULATING NEGATIVE, POSITIVE, NEUTRAL, AND COMPOUND VALUES
 def sentiment(tw_list):
 
@@ -361,23 +362,27 @@ def remove_punc(text):
     text = re.sub('[0-9]+', '', text)
     return text
 
-
+                                                #!THIS IS FOR ENGLISH, NEED TO DO ONE FOR GERMAN TOO
 #! FUCNTION FOR APPLYING TOKENIZATION
 def tokenization(text):
     text = re.split('\W+', text)
     return text
 
-
+                                                #!THIS IS FOR ENGLISH, NEED TO DO ONE FOR GERMAN TOO
 #!FUCNTION FOR REMOVING STOPWARDS
 def remove_stopwords(text):
     text = [word for word in text if word not in stopword]   
     return text
+
+                                                #!THIS IS FOR ENGLISH, NEED TO DO ONE FOR GERMAN TOO
 
 
 #!FUCNTION FOR APPLYING THE STEMMER TO GET ONLY THE ROOTS
 def stemming(text):
     text = [ps.stem(word) for word in text]
     return text
+
+                                                #!THIS IS FOR ENGLISH, NEED TO DO ONE FOR GERMAN TOO
 
 #!CLEANING THE TEXT
 def clean_text(text):

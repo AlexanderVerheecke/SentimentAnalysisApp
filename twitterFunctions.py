@@ -26,6 +26,7 @@ nltk.download('vader_lexicon')
 
 import re
 import string
+import IPython
 from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 

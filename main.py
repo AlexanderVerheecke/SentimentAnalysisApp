@@ -222,7 +222,7 @@ tw_list_positive, tw_list_neutral, tw_list_negative= tf.sentiment(tw_list)
 
 # Sentiment percentage
 st.subheader('Summary')
-st.write("Out of "+ str(len(tweet_list))+" tweets, "+str(len(negative_list))+" were negtive, " +str(len(neutral_list))+ " were neutral, and " +str(len(positive_list)) +" were positive.")
+st.write("Out of "+ str(len(tweet_list))+" tweets, "+str(len(negative_list))+" were negative, " +str(len(neutral_list))+ " were neutral, and " +str(len(positive_list)) +" were positive.")
 
 col1, col2, col3 = st.columns(3)
 negative_percentage = tf.percentage(len(negative_list), len(tweet_list))
